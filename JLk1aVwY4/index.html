@@ -1,0 +1,214 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Anacond. | 日常摸鱼</title>
+
+<link rel="shortcut icon" href="https://kingwangim.github.io/favicon.ico?v=1626275030457">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://kingwangim.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            日常摸鱼
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1626275030457" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    Anacond.
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-07-09 ·
+                    </time>
+                    
+                        <a href="https://kingwangim.github.io/521YMMpSF/" class="post-tags">
+                            # python
+                        </a>
+                    
+                        <a href="https://kingwangim.github.io/XPg2m_TCP/" class="post-tags">
+                            # anaconda
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>Anaconda solutions are serious technology for real data science and ML applications. Anaconda is versatile - you'll be ready to solve problems you don't even know you have yet.</p>
+<!-- more -->
+<h2 id="安装">安装</h2>
+<p>anaconda 在安装过程中，是默认把路径写在 bash_profile 中的，若使用 zsh 而非 bash，在安装后，需在 .~/zshrc 中增加 anaconda 的所在路径。</p>
+<pre><code class="language-bash">vim ~/.zshrc
+
+export PATH=/Users/UserName/opt/anaconda3/bin:$PATH
+
+source ~./zshrc
+</code></pre>
+<p>使用 <code>anaconda --version</code> 进行测试。</p>
+<h2 id="使用">使用</h2>
+<h3 id="创建环境">创建环境</h3>
+<pre><code class="language-bash"># conda create --name your_env_name python=python_version package1, package2
+conda create --name py38 python=3.8
+</code></pre>
+<p>此时，则创建了名为 py38 并指定 python 版本为 3.8 的 python 环境。</p>
+<h3 id="切换环境">切换环境</h3>
+<pre><code class="language-bash"># 检查环境列表
+conda info --envs
+conda env list
+
+# 激活环境
+conda activate your_envname
+
+# 退出环境
+conda deactivate
+
+# 复制环境
+conda create --name new_env_name --clone old_env_name
+
+# 删除环境
+conda remove --name your_env_name -all
+</code></pre>
+<h3 id="其他">其他</h3>
+<h4 id="第三方包">第三方包</h4>
+<pre><code class="language-bash"># 安装
+conda install package_name
+pip install package_name
+
+# 卸载
+conda remove package_name
+pip uninstall package_name
+
+# 查看
+conda list
+
+# 导出包信息
+conda env export &gt; environment.yaml
+
+# yaml 创建相同包
+conda env create --file environment.yaml
+</code></pre>
+<h4 id="升级">升级</h4>
+<pre><code class="language-bash">  conda update conda 
+  conda update anaconda
+  conda update anaconda-navigator 
+</code></pre>
+<h1 id="eof"># EOF</h1>
+
+                </div>
+            </article>
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first"><b>Enjoy The Fucking Life.<b></div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://kingwangim.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

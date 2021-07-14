@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://kingwangim.github.io</id>
+    <title>日常摸鱼</title>
+    <updated>2021-07-14T15:03:56.915Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://kingwangim.github.io"/>
+    <link rel="self" href="https://kingwangim.github.io/atom.xml"/>
+    <subtitle>&lt;b&gt;Enjoy The Fucking Life.&lt;b&gt;</subtitle>
+    <logo>https://kingwangim.github.io/images/avatar.png</logo>
+    <icon>https://kingwangim.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, 日常摸鱼</rights>
+    <entry>
+        <title type="html"><![CDATA[Anacond.]]></title>
+        <id>https://kingwangim.github.io/JLk1aVwY4/</id>
+        <link href="https://kingwangim.github.io/JLk1aVwY4/">
+        </link>
+        <updated>2021-07-09T15:11:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>Anaconda solutions are serious technology for real data science and ML applications. Anaconda is versatile - you'll be ready to solve problems you don't even know you have yet.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Anaconda solutions are serious technology for real data science and ML applications. Anaconda is versatile - you'll be ready to solve problems you don't even know you have yet.</p>
+<!-- more -->
+<h2 id="安装">安装</h2>
+<p>anaconda 在安装过程中，是默认把路径写在 bash_profile 中的，若使用 zsh 而非 bash，在安装后，需在 .~/zshrc 中增加 anaconda 的所在路径。</p>
+<pre><code class="language-bash">vim ~/.zshrc
+
+export PATH=/Users/UserName/opt/anaconda3/bin:$PATH
+
+source ~./zshrc
+</code></pre>
+<p>使用 <code>anaconda --version</code> 进行测试。</p>
+<h2 id="使用">使用</h2>
+<h3 id="创建环境">创建环境</h3>
+<pre><code class="language-bash"># conda create --name your_env_name python=python_version package1, package2
+conda create --name py38 python=3.8
+</code></pre>
+<p>此时，则创建了名为 py38 并指定 python 版本为 3.8 的 python 环境。</p>
+<h3 id="切换环境">切换环境</h3>
+<pre><code class="language-bash"># 检查环境列表
+conda info --envs
+conda env list
+
+# 激活环境
+conda activate your_envname
+
+# 退出环境
+conda deactivate
+
+# 复制环境
+conda create --name new_env_name --clone old_env_name
+
+# 删除环境
+conda remove --name your_env_name -all
+</code></pre>
+<h3 id="其他">其他</h3>
+<h4 id="第三方包">第三方包</h4>
+<pre><code class="language-bash"># 安装
+conda install package_name
+pip install package_name
+
+# 卸载
+conda remove package_name
+pip uninstall package_name
+
+# 查看
+conda list
+
+# 导出包信息
+conda env export &gt; environment.yaml
+
+# yaml 创建相同包
+conda env create --file environment.yaml
+</code></pre>
+<h4 id="升级">升级</h4>
+<pre><code class="language-bash">  conda update conda 
+  conda update anaconda
+  conda update anaconda-navigator 
+</code></pre>
+<h1 id="eof"># EOF</h1>
+]]></content>
+    </entry>
+</feed>
